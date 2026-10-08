@@ -1,0 +1,34 @@
+
+
+-------------------------------------------------------
+[link][https://vjudge.net/contest/669349#problem]
+
+
+A  AC	AtCoder abc273_a	A Recursive Function
+B  AC	Gym 324997A	3N+1 Series
+C  AC	Gym 324997C	Fast power
+D  AC	CSES 1068	Weird Algorithm
+E  AC	CSES 1623	Apple Division
+F  AC	CSES 1622	Creating Strings
+G  AC	Gym 324997M	The maximum path-sum
+H  AC	Gym 325692M	N Queens
+I  AC	CSES 1624	Chessboard and Queens
+J  AC	AtCoder abc367_c	Enumerate Sequences
+K  AC	CodeForces 1553C	Penalty
+L  AC	CodeForces 550B	Preparing Olympiad
+M  AC	AtCoder abc233_c	Product
+N	CodeForces 1111C	Creative Snap
+O  AC	CodeForces 1829D	Gold Rush
+P  AC	AtCoder abc167_c	Skill Up
+Q  AC	SPOJ BTCK	A problem of Backtracking
+R  AC	Gym 325692J	Knapsack
+S  AC	SPOJ EELCS	Easy Longest Common Subsequence
+T  AC	CodeForces 476B	Dreamoon and WiFi
+U  AC	Gym 325692O	The number of paths in grid
+V  AC	UVA 574	Sum It Up
+W	CodeForces 1145A	Thanos Sort
+X	Kattis goodmorning	Good Morning!
+Y	CodeForces 1353D	Constructing the Array
+Z	CodeForces 1385D	a-Good String
+
+-------------------------------------------------------

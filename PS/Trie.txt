@@ -1,0 +1,24 @@
+
+
+link [https://vjudge.net/contest/846480#problem]
+
+----------------------------------------------------
+   Su
+A	CSES 1731	Word Combinations
+B	CSES 1753	String Matching
+C	CSES 1732	Finding Borders
+D	CSES 1733	Finding Periods
+E	CSES 2420	Palindrome Queries
+F	SPOJ NAJPF	Pattern Find
+G	UVA 455	Periodic Strings
+H	HackerRank almost-equal-strings	Almost Equal Strings
+I	SPOJ PLD	Palindromes
+J	CodeForces 1330B	Dreamoon Likes Permutations
+K	CodeForces 245H	Queries for Number of Palindromes
+L	CodeForces 1895D	XOR Construction
+M	CodeForces 1285D	Dr. Evil Underscores
+N	CodeForces 1902E	Collapsing Strings
+O	CodeForces 842D	Vitya and Strange Lesson
+P	CodeForces 888G	Xor-MST
+Q   AC	SPOJ PHONELST	Phone List
+R   AC	SPOJ ADAINDEX	Ada and Indexing

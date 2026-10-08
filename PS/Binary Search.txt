@@ -1,0 +1,71 @@
+
+1 -[https://cp-algorithms.com/num_methods/binary_search.html?utm_source=chatgpt.com]
+2 -[https://codeforces.com/edu/course/2/lesson/6]
+3 -[https://usaco.guide/silver/binary-search-sorted-array]
+
+
+[link]https://vjudge.net/contest/661083#problem
+
+--------------------------------------------------------
+
+   Su
+A   AC	Gym 475293B	Binary Search
+B   AC	Gym 475293C	Lower Bound
+C   AC  Gym 475293D	Upper Bound
+D   AC	CodeForces 600B	Queries about less or equal elements
+E   AC	CodeForces 706B	Interesting drink
+F   AC	CodeForces 1676E	Eating Queries
+G   AC	CSES 1620	Factory Machines
+H   AC	CodeForces 670D2	Magic Powder - 2
+I   AC	Gym 475293A	Sqrt
+J   AC	CodeForces 474B	Worms
+K   AC	CodeForces 2005B2	The Strict Teacher (Hard Version)
+L   AC	Gym 105123D2	Predator or Prey (Hard Version)
+M   AC	CodeForces 812C	Sagheer and Nubian Market
+N   AC	CodeForces 1907D	Jumping Through Segments
+O   AC	CodeForces 1703F	Yet Another Problem About Pairs Satisfying an Inequality
+P   AC	CSES 1085	Array Division
+Q   AC	CodeForces 68B	Energy exchange
+R   AC	CodeForces 287B	Pipeline
+S   AC	CodeForces 567D	One-Dimensional Battle Ships
+T   AC	CodeForces 363D	Renting Bikes
+U   AC	Gym 454161J	Al3asma
+V   AC	Gym 101021-1	Guess the Number
+W   AC	CodeForces 1807E	Interview
+X   AC	CodeForces 1999G1	Ruler (easy version)
+
+----------------------------------------------------------
+           [Binary Search on Answer]
+
+-------------------[Easy]-------------------------
+
+1. Koko Eating Bananas  (AC)
+2. Find the Smallest Divisor Given a Threshold  (AC)
+3. Capacity To Ship Packages Within D Days  (AC)
+4. Minimum Number of Days to Make m Bouquets (AC)
+5. Magnetic Force Between Two Balls 
+6. Minimum Limit of Balls in a Bag 
+7. Minimum Speed to Arrive on Time 
+
+-------------------[Medium]-------------------------
+
+Minimized Maximum of Products Distributed to Any Store
+Maximum Candies Allocated to K Children
+Minimum Time to Repair Cars
+Split Array Largest Sum
+Divide Chocolate
+Maximum Tastiness of Candy Basket
+House Robber IV
+Minimize the Maximum Difference of Pairs
+
+-------------------[Hard]-------------------------
+
+Find K-th Smallest Pair Distance
+Kth Smallest Number in Multiplication Table
+Kth Smallest Element in a Sorted Matrix
+Minimize Max Distance to Gas Station
+Cutting Ribbons
+
+
+-------------------[GeeksForGeeks]----------------
+1- [https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1]

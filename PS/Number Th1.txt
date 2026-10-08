@@ -1,0 +1,56 @@
+[https://www.canva.com/design/DAGS68X2j70/wnaclXhslRGnbIQTY8OWEg/edit]
+
+--------------------------------------------------
+[https://vjudge.net/contest/663313#problem]
+--------------------------------------------------
+A   AC	Gym 556990A	Divisors
+B   AC	Gym 556990B	Is it Prime (easy version)
+C   AC	Gym 556990C	Prime factorization (easy version)
+D   AC	Gym 556990D	Is it Prime (hard version)
+E   AC 	HackerRank euler007	Project Euler #7: 10001st prime
+F   AC 	SPOJ TDPRIMES	Printing some primes
+G   AC 	Gym 556990E	Prime factorization (hard version)
+H   AC  UVA 10789	Prime Frequency
+I   AC	CodeForces 26A	Almost Prime
+J   AC	SPOJ PSYCHON	Psycho
+K   AC	CodeForces 17A	Noldbach problem
+L   AC  CodeForces 1475A	Odd Divisor
+M   AC  CodeForces 893B	Beautiful Divisors
+N   AC  CodeForces 230B	T-primes
+O   AC  CodeForces 776B	Sherlock and his girlfriend
+P   AC  CodeForces 573A	Bear and Poker
+Q   AC  CodeForces 271B	Prime Matrix
+R   AC  CodeChef CHEFPRMS	Chef and Semi-Primes
+S   AC  CodeForces 1759D	Make It Round
+T   AC  CodeForces 236B	Easy Number Challenge
+U   AC  CodeForces 150A	Win or Freeze
+V   AC  UVA 10168	Summation of Four Primes
+W   AC  UVA 884	Factorial Factors
+X   AC  CodeForces 679A	Bear and Prime 100
+Y   AC  CodeForces 1062B	Math
+
+--------------------------------------------------
+
+[https://progvar.fun/problemsets/primes]
+Number Theory: 
+  - Prime and Composite,
+  - Primality Testing, 
+  - Prime Sieves,
+  - Finding Divisors
+--------------------------------------------------
+1   AC   ABC149 C - Next Prime
+2   AC	 CSES 3396 - Next Prime
+3   AC	 ABC180 C - Cream puff
+4   AC	 CF749A - Bachgold Problem
+5   AC	 CF230B - T-primes
+6   AC	 CF776B - Sherlock and his girlfriend
+7   AC	 UVa 543 Goldbach's Conjecture
+8   AC	 CF472A - Design Tutorial: Learn from Math
+9	 CF584D - Dima and Lisa
+10  AC   HR Leonardo's Prime Factors
+11	 ABC096 D - Five, Five Everywhere
+12	 ABC144 C - Walk on Multiplication Table	
+13	 HR Bus Station
+14	 ABC170 D - Not Divisible
+15	 ABC084 D - 2017-like Number
+16	 ABC190 D - Staircase Sequences

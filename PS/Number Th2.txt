@@ -1,0 +1,27 @@
+[link][https://vjudge.net/contest/667337#problem]
+--------------------------------------------------------
+A  AC	CodeChef SOLVEGCD	GCD OF TWO NUMBERS
+B  AC	Gym 558735C	Remainder Quest
+C  AC	CodeForces 1458A	Row GCD
+D  AC	CSES 1095	Exponentiation
+E  AC	CodeForces 1328A	Divisibility Problem
+F  AC	Gym 558735A	Divisors Queries
+G  AC	CodeForces 1370A	Maximum GCD
+H  AC	CodeForces 1370B	GCD Compression
+I  AC	SPOJ DB001	DB & GCD
+J  AC	Gym 558735B	Divisors of Product
+K  AC 	CodeForces 1742D	Coprime
+L  AC	CodeForces 664A	Complicated GCD
+M  AC	CodeForces 1872D	Plus Minus Permutation
+N  AC	AtCoder abc109_c	Skip
+O  AC	CodeForces 793A	Oleg and shares
+P  AC	CodeForces 236B	Easy Number Challenge
+Q  AC	UVA 10892	LCM Cardinality
+R  AC	Gym 558735D	Divisibility
+S  AC	UVA 11417	GCD
+T  AC	CodeForces 1734C	Removing Smallest Multiples
+U  AC	CodeForces 1473B	String LCM
+V  AC	CodeForces 1985G	D-Function
+W  AC	CodeForces 75C	Modified GCD
+X  AC	CodeForces 1514C	Product 1 Modulo N
+Y  AC	CodeForces 1285C	Fadi and LCM
