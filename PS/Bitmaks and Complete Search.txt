@@ -1,0 +1,36 @@
+
+
+
+
+
+--------------------------------------------
+[link][https://vjudge.net/contest/671167#problem]
+[code][https://github.com/ICPCMansoura/Level-1-2024-2025-Sheets-solutions]
+
+   su
+A  AC	Gym 475293M	Don't leave me
+B  AC	Gym 475293N	The last order
+C  AC	CodeForces 1698A	XOR Mixup
+D  AC	CodeForces 2020A	Find Minimum Operations
+E	CSES 1650	Range Xor Queries
+F	Gym 475293H	Logic 1 Course
+G	CodeForces 1669H	Maximal AND
+H	CodeForces 579A	Raising Bacteria
+I	CodeForces 1421A	XORwice
+J	Gym 475293I	Maximum XOR Subsequence
+K	CodeForces 550B	Preparing Olympiad
+L	CodeForces 611B	New Year and Old Property
+M	CodeForces 1527A	And Then There Were K
+N	CodeForces 1979B	XOR Sequences
+O	Gym 475293G	LIS &amp; LDS
+P	CodeForces 1994B	Fun Game
+Q	Gym 475293K	Last End
+R	CodeForces 1926D	Vlad and Division
+S	CodeForces 1878E	Iva & Pav
+T	CodeForces 1872E	Data Structures Fan
+U	CodeForces 1918C	XOR-distance
+V	CodeForces 1249C2	Good Numbers (hard version)
+W	CodeForces 1851F	Lisa and the Martians
+X	CodeForces 1303D	Fill The Bag
+Y	CodeForces 1036C	Classy Numbers
+Z	CodeForces 1556D	Take a Guess

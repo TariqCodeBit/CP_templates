@@ -1,0 +1,284 @@
+
+/*
+    Once You Stop Learning You Start Dying
+    BIT MANIPULATION TEMPLATE
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+using i128 = __int128_t;
+
+const int N = 1e5 + 5;
+const ll MOD = 1e9 + 7;
+
+/*========================================
+    1. NUMBER REPRESENTATION
+========================================*/
+
+// Convert a non-negative number to any base >= 2.
+// Example: Representation(13, 2) -> {1, 1, 0, 1}
+vector<int> Representation(ll n, int base) {
+    vector<int> ans;
+
+    if (n == 0) return {0};
+
+    while (n > 0) {
+        ans.push_back(n % base);
+        n /= base;
+    }
+
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+/*========================================
+    2. XOR FROM 0 TO N
+========================================*/
+
+// XOR of all numbers from 0 to n.
+ll XOR_0_to_n(ll n) {
+    if (n < 0) return 0;
+
+    if (n % 4 == 0) return n;
+    if (n % 4 == 1) return 1;
+    if (n % 4 == 2) return n + 1;
+    return 0;
+}
+
+// XOR of all numbers from 1 to n.
+ll XOR_1_to_n(ll n) {
+    return XOR_0_to_n(n);
+}
+
+// XOR of all numbers in [l, r].
+ll XOR_Range(ll l, ll r) {
+    if (l > r) return 0;
+    if (l == 0) return XOR_0_to_n(r);
+
+    return XOR_0_to_n(r) ^ XOR_0_to_n(l - 1);
+}
+
+/*========================================
+    3. PREFIX XOR
+========================================*/
+
+// pref[i] = XOR of a[0 ... i-1].
+vector<ll> Prefix_XOR(const vector<ll>& a) {
+    int n = a.size();
+    vector<ll> pref(n + 1, 0);
+
+    for (int i = 0; i < n; i++) {
+        pref[i + 1] = pref[i] ^ a[i];
+    }
+
+    return pref;
+}
+
+// XOR of inclusive zero-based range [l, r].
+ll Range_XOR(const vector<ll>& pref, int l, int r) {
+    return pref[r + 1] ^ pref[l];
+}
+
+/*========================================
+    4. BASIC BIT OPERATIONS
+========================================*/
+
+// Check whether bit i is set.
+bool CheckBit(ll n, int i) {
+    return (n & (1LL << i)) != 0;
+}
+
+// Get bit i: returns 0 or 1.
+int GetBit(ll n, int i) {
+    return (n >> i) & 1LL;
+}
+
+// Toggle bit i: 0 -> 1, 1 -> 0.
+ll ToggleBit(ll n, int i) {
+    return n ^ (1LL << i);
+}
+
+// Set bit i to 1.
+ll SetBit(ll n, int i) {
+    return n | (1LL << i);
+}
+
+// Clear bit i: set it to 0.
+ll ClearBit(ll n, int i) {
+    return n & ~(1LL << i);
+}
+
+// Update bit i to a specific value (0 or 1).
+ll UpdateBit(ll n, int i, int value) {
+    if (value == 1) return SetBit(n, i);
+    return ClearBit(n, i);
+}
+
+/*========================================
+    5. POWER OF TWO
+========================================*/
+
+// A positive number is a power of two
+// if it contains exactly one set bit.
+bool IsPowerOfTwo(ll n) {
+    return n > 0 && (n & (n - 1)) == 0;
+}
+
+/*========================================
+    6. COUNT SET BITS
+========================================*/
+
+// Count the number of 1s in the binary representation.
+int CountSetBits(unsigned long long n) {
+    return __builtin_popcountll(n);
+}
+
+/*========================================
+    7. LOWEST SET BIT
+========================================*/
+
+// Return the value of the lowest set bit.
+// Example: 12 = 1100 -> 4 = 0100.
+ll LowestSetBit(ll n) {
+    return n & -n;
+}
+
+// Remove the lowest set bit.
+ll RemoveLowestSetBit(ll n) {
+    return n & (n - 1);
+}
+
+/*========================================
+    8. PRINT SET BIT POSITIONS
+========================================*/
+
+// Positions are zero-based.
+void PrintSetBitPositions(unsigned long long n) {
+    for (int bit = 0; bit < 64; bit++) {
+        if ((n >> bit) & 1ULL) {
+            cout << bit << ' ';
+        }
+    }
+
+    cout << '\n';
+}
+
+/*========================================
+    9. PREFIX BIT COUNTS
+========================================*/
+
+// pref[bit][i] = number of set bits at position
+// bit among the first i elements.
+//
+// Supports non-negative signed long long values.
+// Bits 0 through 62 are considered.
+vector<vector<ll>> PrefixBits(const vector<ll>& a) {
+    int n = a.size();
+    const int BITS = 63;
+
+    vector<vector<ll>> pref(
+        BITS, vector<ll>(n + 1, 0)
+    );
+
+    for (int bit = 0; bit < BITS; bit++) {
+        for (int i = 0; i < n; i++) {
+            pref[bit][i + 1] =
+                pref[bit][i] + ((a[i] >> bit) & 1LL);
+        }
+    }
+
+    return pref;
+}
+
+// Bitwise OR of inclusive zero-based range [l, r].
+ll Range_OR(const vector<vector<ll>>& pref, int l, int r) {
+    ll ans = 0;
+
+    for (int bit = 0; bit < (int)pref.size(); bit++) {
+        ll cnt = pref[bit][r + 1] - pref[bit][l];
+
+        if (cnt > 0) {
+            ans |= (1LL << bit);
+        }
+    }
+
+    return ans;
+}
+
+// Bitwise AND of inclusive zero-based range [l, r].
+ll Range_AND(const vector<vector<ll>>& pref, int l, int r) {
+    ll ans = 0;
+    int len = r - l + 1;
+
+    for (int bit = 0; bit < (int)pref.size(); bit++) {
+        ll cnt = pref[bit][r + 1] - pref[bit][l];
+
+        if (cnt == len) {
+            ans |= (1LL << bit);
+        }
+    }
+
+    return ans;
+}
+
+/*========================================
+    10. IMPORTANT BIT PROPERTIES
+========================================*/
+
+/*
+    XOR:
+    A ^ A = 0
+    A ^ 0 = A
+    A ^ B = B ^ A
+    (A ^ B) ^ C = A ^ (B ^ C)
+
+    If A ^ B = C:
+        A ^ C = B
+        B ^ C = A
+
+    Check bit:
+        n & (1LL << bit)
+
+    Set bit:
+        n | (1LL << bit)
+
+    Toggle bit:
+        n ^ (1LL << bit)
+
+    Clear bit:
+        n & ~(1LL << bit)
+
+    Remove lowest set bit:
+        n & (n - 1)
+
+    Extract lowest set bit:
+        n & -n
+
+    Power of two:
+        n > 0 && (n & (n - 1)) == 0
+
+    XOR of range [l, r]:
+        XOR_0_to_n(r) ^ XOR_0_to_n(l - 1)
+
+    Prefix XOR of array range [l, r]:
+        pref[r + 1] ^ pref[l]
+
+    Range OR:
+        A bit appears in at least one element.
+
+    Range AND:
+        A bit appears in every element.
+*/
+
+/*========================================
+    MAIN
+========================================*/
+
+int32_t main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    return 0;
+}

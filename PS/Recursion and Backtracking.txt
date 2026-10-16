@@ -26,9 +26,9 @@ S  AC	SPOJ EELCS	Easy Longest Common Subsequence
 T  AC	CodeForces 476B	Dreamoon and WiFi
 U  AC	Gym 325692O	The number of paths in grid
 V  AC	UVA 574	Sum It Up
-W	CodeForces 1145A	Thanos Sort
-X	Kattis goodmorning	Good Morning!
-Y	CodeForces 1353D	Constructing the Array
-Z	CodeForces 1385D	a-Good String
+W  AC	CodeForces 1145A	Thanos Sort
+X  AC	Kattis goodmorning	Good Morning!
+Y  AC	CodeForces 1353D	Constructing the Array
+Z  AC	CodeForces 1385D	a-Good String
 
 -------------------------------------------------------

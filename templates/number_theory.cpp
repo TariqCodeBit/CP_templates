@@ -45,6 +45,7 @@ bool prime[15000105];
 
 void sieve(int n) {
     fill(prime, prime + n + 1, true);
+    __primes_generated__=true;
 
     prime[0] = prime[1] = false;
 
@@ -63,12 +64,11 @@ vector<ll> primelist;
 bool __primes_generated__ = false;
 
 void genprimes(int n) {
-    if (__primes_generated__)
-        return;
-
-    __primes_generated__ = true;
 
     sieve(n);
+
+    if (__primes_generated__)
+        return;
 
     for (ll i = 2; i <= n; i++) {
         if (prime[i])
@@ -493,7 +493,8 @@ bool isPerfectSquare(ll n) {
 
 
 // ==================== CHECK POWER OF TWO ====================
-
+//0111
+//0110
 bool isPowerOfTwo(ll n) {
 
     return n > 0 && (n & (n - 1)) == 0;
