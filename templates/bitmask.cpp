@@ -64,22 +64,16 @@ ll XOR_Range(ll l, ll r) {
     3. PREFIX XOR
 ========================================*/
 
-// pref[i] = XOR of a[0 ... i-1].
-vector<ll> Prefix_XOR(const vector<ll>& a) {
-    int n = a.size();
-    vector<ll> pref(n + 1, 0);
-
-    for (int i = 0; i < n; i++) {
-        pref[i + 1] = pref[i] ^ a[i];
+// pref[i] = XOR of a[1 ... n] 1 index.
+void Prefix_XOR(vector<ll>& pref) {
+    
+    for (int i = 1; i <= pref.size(); i++) {
+          pref[i]^=pref[i-1];
     }
-
-    return pref;
+   //ans for each q = pref[r] ^ pref[l-1];
 }
 
-// XOR of inclusive zero-based range [l, r].
-ll Range_XOR(const vector<ll>& pref, int l, int r) {
-    return pref[r + 1] ^ pref[l];
-}
+
 
 /*========================================
     4. BASIC BIT OPERATIONS
@@ -133,6 +127,19 @@ bool IsPowerOfTwo(ll n) {
 // Count the number of 1s in the binary representation.
 int CountSetBits(unsigned long long n) {
     return __builtin_popcountll(n);
+}
+// Counts the number of 0s before the first set bit (1),
+int CountTralingZeros(unsigned long long n){
+    // starting from the least significant bit (rightmost bit).
+    // or also return index for rightmost set bit (1)
+    return __builtin_ctzll(n);//01100 ans is 2 0s
+}
+// starting from the most significant bit (leftmost bit).
+int CountLeadingZeros(unsigned long long n){
+    return __builtin_clzll(n);//00010 ans is 3 0s
+}
+int index_leftmostsetbit(int n){
+    return 63-CountLeadingZeros(n);
 }
 
 /*========================================
@@ -227,7 +234,17 @@ ll Range_AND(const vector<vector<ll>>& pref, int l, int r) {
     10. IMPORTANT BIT PROPERTIES
 ========================================*/
 
-/*
+/* 
+
+2- if 'A' is a one bit number
+   [A & 1 = A]
+   [A | 0 = A]
+   [A ^ 0 = A]
+   [A ^ 1 = 1-A]
+
+ 3- [A ^ A = 0] for any number
+   
+
     XOR:
     A ^ A = 0
     A ^ 0 = A

@@ -1,44 +1,15 @@
 //Once You Stop Learning You start dying
 #include <bits/stdc++.h>
 using i128 = __int128_t;
-#define ll long long
+#define int long long
 using namespace std;
 
 const int N=1e5+5;
 const int MOD = (int)1e9 + 7;
 
-vector<int>Representation(int n,int base){
-    vector<int>ans;
-    while (n)
-    {
-       ans.push_back(n%base);
-       n/=base;
-    }
-    return ans;
-    
-}
 
 void solve(){
-    int t{};
-    cin>>t;
-    while (t--)
-    {
-        
-        int n,k;cin>>n>>k;
-        if(k==1){
-            cout<<n<<'\n';
-            continue;
-        }
-          
-        int ans=0;
-         vector<int>tm=Representation(n,k);
-        for(int i:tm){
-            ans+=i;
-        }
-
-        cout<<ans<<'\n';
-        
-    }
+   
 }
 
 int32_t main(){
