@@ -141,7 +141,16 @@ int CountLeadingZeros(unsigned long long n){
 int index_leftmostsetbit(int n){
     return 63-CountLeadingZeros(n);
 }
-
+// Change all trailing zeros in the binary representation to ones.
+int SetTrailingZerosToOnes(int n) {
+    //ex : 0110100  -> 0110111
+    return n | (n - 1);
+}
+// Clear all trailing ones in the binary representation.
+int ClearTrailingOnes(int n) {
+    //ex : 01110111  -> 01110000
+    return n & (n + 1);
+}
 /*========================================
     7. LOWEST SET BIT
 ========================================*/
@@ -181,46 +190,38 @@ void PrintSetBitPositions(unsigned long long n) {
 //
 // Supports non-negative signed long long values.
 // Bits 0 through 62 are considered.
-vector<vector<ll>> PrefixBits(const vector<ll>& a) {
-    int n = a.size();
-    const int BITS = 63;
-
-    vector<vector<ll>> pref(
-        BITS, vector<ll>(n + 1, 0)
-    );
-
-    for (int bit = 0; bit < BITS; bit++) {
-        for (int i = 0; i < n; i++) {
-            pref[bit][i + 1] =
-                pref[bit][i] + ((a[i] >> bit) & 1LL);
+vector<vector<int>>pref;
+void PrefixBits() {
+    int n;cin>>n;
+    vector<int>a(n+1);
+    pref.resize(32,vector<int>(n+1,0));
+    for(int bit=0;bit < 32;bit++){
+        for(int idx{1};idx <= n;idx++){
+            pref[bit][idx]=pref[bit][idx-1]+((a[idx]>>bit)&1);
         }
     }
-
-    return pref;
 }
 
 // Bitwise OR of inclusive zero-based range [l, r].
-ll Range_OR(const vector<vector<ll>>& pref, int l, int r) {
-    ll ans = 0;
+int Range_OR( int l, int r) {
+    int ans{};
+    for(int bit=0;bit < 32;bit++){
+        int cnt=pref[bit][r]-pref[bit][l-1];
 
-    for (int bit = 0; bit < (int)pref.size(); bit++) {
-        ll cnt = pref[bit][r + 1] - pref[bit][l];
-
-        if (cnt > 0) {
-            ans |= (1LL << bit);
-        }
+        if(cnt > 0)
+          ans|=(1<<bit);
     }
 
     return ans;
 }
 
 // Bitwise AND of inclusive zero-based range [l, r].
-ll Range_AND(const vector<vector<ll>>& pref, int l, int r) {
-    ll ans = 0;
+int Range_AND( int l, int r) {
+    int ans = 0;
     int len = r - l + 1;
 
-    for (int bit = 0; bit < (int)pref.size(); bit++) {
-        ll cnt = pref[bit][r + 1] - pref[bit][l];
+    for (int bit = 0; bit < 32; bit++) {
+        int cnt=pref[bit][r]-pref[bit][l-1];
 
         if (cnt == len) {
             ans |= (1LL << bit);

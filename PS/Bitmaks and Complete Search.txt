@@ -13,16 +13,16 @@ B  AC	Gym 475293N	The last order
 C  AC	CodeForces 1698A	XOR Mixup
 D  AC	CodeForces 2020A	Find Minimum Operations
 E  AC	CSES 1650	Range Xor Queries
-F  	Gym 475293H	Logic 1 Course
+F  AC	Gym 475293H	Logic 1 Course
 G  AC	CodeForces 1669H	Maximal AND
 H  AC	CodeForces 579A	Raising Bacteria
-I  	CodeForces 1421A	XORwice
+I  AC	CodeForces 1421A	XORwice
 J  AC	Gym 475293I	Maximum XOR Subsequence
 K  AC	CodeForces 550B	Preparing Olympiad
-L	CodeForces 611B	New Year and Old Property
-M	CodeForces 1527A	And Then There Were K
+L  AC 	CodeForces 611B	New Year and Old Property
+M  AC	CodeForces 1527A	And Then There Were K
 N	CodeForces 1979B	XOR Sequences
-O	Gym 475293G	LIS &amp; LDS
+O  AC	Gym 475293G	LIS &amp; LDS
 P	CodeForces 1994B	Fun Game
 Q	Gym 475293K	Last End
 R	CodeForces 1926D	Vlad and Division
